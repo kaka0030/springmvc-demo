@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wym.dao.BlogMapper">
+	<resultMap id="BaseResultMap" type="com.wym.entity.Blog">
+		<id column="ID" jdbcType="INTEGER" property="id" />
+		<result column="NAME" jdbcType="VARCHAR" property="name" />
+		<result column="CONTENT" jdbcType="VARCHAR" property="content" />
+	</resultMap>
+	<select id="queryAll"  resultMap="BaseResultMap">
+		select ID,NAME,CONTENT
+		from BLOG
+	</select>
+</mapper>
